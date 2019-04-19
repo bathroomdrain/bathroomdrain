@@ -1,3 +1,5 @@
 RewriteEngine on
-RewriteCond %{HTTP_HOST} !^www\.nezba\.com
-RewriteRule ^(.*)$ https://nezba.com//$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^nezba.com [NC]
+
+RewriteRule ^(.*)$ https://www.nezba.com/$1 [L,R=301,NC]
